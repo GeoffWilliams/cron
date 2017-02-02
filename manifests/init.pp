@@ -47,6 +47,7 @@ class cron(
     $anacrontab = $cron::params::anacrontab,
     $crontab    = $cron::params::crontab,
     $cron_dirs  = $cron::params::cron_dirs,
+    $cron_log   = $cron::params::cron_log,
 ) inherits cron::params {
 
   File {
@@ -63,7 +64,7 @@ class cron(
     ensure => file,
   }
 
-  file { $crontab:
+  file { [$crontab, $cron_log]:
     ensure => file,
   }
 
@@ -71,4 +72,5 @@ class cron(
     ensure => directory,
     mode   => "0700",
   }
+
 }

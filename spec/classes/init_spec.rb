@@ -113,7 +113,16 @@ describe 'cron' do
         }
       )}
     end
-    
+
+    context 'permissions on /var/log/cron' do
+      it { should contain_file('/var/log/cron').with(
+        {
+          :owner  => 'root',
+          :group  => 'root',
+          :mode   => '0600',
+        }
+      )}
+    end
 
   end
 end

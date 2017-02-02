@@ -4,6 +4,7 @@ class cron::params {
       $package    = "cronie-anacron"
       $anacrontab = "/etc/anacrontab"
       $crontab    = "/etc/crontab"
+      $cron_log  = "/var/log/cron"
       $cron_dirs  = [
         "/etc/cron.hourly",
         "/etc/cron.daily",
