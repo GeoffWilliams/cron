@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/GeoffWilliams/cron.svg?branch=master)](https://travis-ci.org/GeoffWilliams/cron)
 # cron
 
 #### Table of Contents
