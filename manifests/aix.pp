@@ -1,3 +1,6 @@
+# Cron::Aix
+#
+# Manage cron on AIX
 class cron::aix(
     Array $allow_users      = [],
     String $cron_allow_file = $cron::params::cron_allow_file,

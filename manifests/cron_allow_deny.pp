@@ -1,3 +1,6 @@
+# Cron::Cron_allow_deny
+#
+# Mange cron.deny and cron.allow, optionally add users to cron.allow
 class cron::cron_allow_deny(
   String $cron_allow_file,
   String $cron_deny_file,

@@ -1,3 +1,6 @@
+# Cron::Params
+#
+# Params pattern for cron module
 class cron::params {
   case $facts["os"]["family"] {
     "RedHat": {

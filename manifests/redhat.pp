@@ -1,3 +1,6 @@
+# Cron::Redhat
+#
+# Support for locking down Cron on RHEL
 class cron::redhat(
     String $package    = $cron::params::package,
     String $anacrontab = $cron::params::anacrontab,

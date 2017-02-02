@@ -1,10 +1,12 @@
+# Cron::Solaris
+#
+# Support for locking down cron on Solaris
 class cron::solaris(
     String $var_cron         = $cron::params::var_cron,
     String $cron_allow_file  = $cron::params::cron_allow_file,
     String $cron_deny_file   = $cron::params::cron_deny_file,
     Array $allow_users       = [],
 ) inherits cron::params {
-
 
   file { $var_cron:
     ensure => directory,
