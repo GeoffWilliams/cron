@@ -75,7 +75,7 @@ class {"cron::aix":}
 #### Allowing specific users
 ```puppet
 class {"cron::aix":
-  allow_users => ['sys','adm']
+  allow_users => ['root','adm']
 }
 ```
 
