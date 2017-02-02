@@ -21,6 +21,8 @@ describe 'cron::aix' do
       {
         :ensure => 'file',
         :mode   => "0400",
+        :owner  => "root",
+        :group  => "sys",
       }
     )}
   end

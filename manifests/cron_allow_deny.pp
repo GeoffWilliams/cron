@@ -1,15 +1,21 @@
 # Cron::Cron_allow_deny
 #
 # Mange cron.deny and cron.allow, optionally add users to cron.allow
+#
+# @param allow_users Array of users to insert into cron.allow
+# @param cron_allow_file File to use for cron.allow
+# @param cron_deny_file File to use for cron.deny
+# @param file_group Group owner for files (cron.allow) 
 class cron::cron_allow_deny(
   String $cron_allow_file,
   String $cron_deny_file,
   Array $allow_users,
+  String $file_group,
 ) {
 
   File {
     owner => "root",
-    group => "root",
+    group => $file_group,
   }
 
   file { $cron_allow_file:
