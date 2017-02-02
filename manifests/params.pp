@@ -4,7 +4,7 @@ class cron::params {
       $package    = "cronie-anacron"
       $anacrontab = "/etc/anacrontab"
       $crontab    = "/etc/crontab"
-      $cron_log  = "/var/log/cron"
+      $cron_log   = "/var/log/cron"
       $cron_dirs  = [
         "/etc/cron.hourly",
         "/etc/cron.daily",
@@ -13,8 +13,17 @@ class cron::params {
         "/etc/cron.d",
       ]
     }
+    "AIX": {
+      $cron_allow_file  = "/var/adm/cron/cron.allow"
+      $cron_deny_file   = "/var/adm/cron/cron.deny"
+    }
+    "Solaris": {
+      $var_cron         = "/var/cron"
+      $cron_allow_file  = "/var/adm/cron/cron.allow"
+      $cron_deny_file   = "/var/adm/cron/cron.deny"
+    }
     default: {
-      fail("Class ${name} does not support ${facts["os"]["family"]} yet")
+      fail("Class ${name} does not support ${facts['os']['family']} yet")
     }
   }
 
