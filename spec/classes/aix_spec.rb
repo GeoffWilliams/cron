@@ -20,7 +20,7 @@ describe 'cron::aix' do
     it { should contain_file('/var/adm/cron/cron.allow').with(
       {
         :ensure => 'file',
-
+        :mode   => "0400",
       }
     )}
   end

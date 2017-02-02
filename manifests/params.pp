@@ -18,9 +18,9 @@ class cron::params {
       $cron_deny_file   = "/var/adm/cron/cron.deny"
     }
     "Solaris": {
-      $var_cron         = "/var/cron"
-      $cron_allow_file  = "/var/adm/cron/cron.allow"
-      $cron_deny_file   = "/var/adm/cron/cron.deny"
+      $var_cron        = "/var/cron"
+      $cron_allow_file = "/etc/cron.d/cron.allow"
+      $cron_deny_file  = "/etc/cron.d/cron.deny"
     }
     default: {
       fail("Class ${name} does not support ${facts['os']['family']} yet")
