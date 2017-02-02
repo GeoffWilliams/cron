@@ -1,0 +1,15 @@
+{
+  "name": "geoffwilliams-cron",
+  "version": "0.1.0",
+  "author": "geoffwilliams",
+  "summary": "Manage cron on AIX, Solaris and RHEL",
+  "license": "Apache-2.0",
+  "source": "https://github.com/GeoffWilliams/cron",
+  "project_page": "https://github.com/GeoffWilliams/cron",
+  "issues_url": "https://github.com/GeoffWilliams/cron/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
