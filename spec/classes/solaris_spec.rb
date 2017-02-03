@@ -58,13 +58,14 @@ describe 'cron::solaris' do
       }
     )}
 
-    # it { should contain_file_line("/etc/cron.d/cron.allow_adm").with(
-    #   {
-    #     :ensure => "present",
-    #     :path   => "/etc/cron.d/cron.allow",
-    #     :line   => "adm",
-    #   }
-    # )}
+# # cd /etc/default
+# # awk '/CRONLOG=/ { $1 =
+# "CRONLOG=YES" }; \ { print }' cron >
+# cron.new
+# # mv cron.new cron
+# # pkgchk -f -n -p /etc/default/cron
+# # chown root:root /var/cron/log
+# # chmod go-rwx /var/cron/log
   end
 
 

@@ -59,4 +59,16 @@ describe 'cron::aix' do
     )}
   end
 
+  context 'locks down root crontab' do
+    it { should contain_file("/var/spool/cron/crontabs/root").with(
+      {
+        :ensure => "file",
+        :owner  => "root",
+        :group  => "cron",
+        :mode   => "0700",
+      }
+    )}
+  end
+
+
 end

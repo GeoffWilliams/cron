@@ -19,13 +19,16 @@ class cron::params {
     "AIX": {
       $cron_allow_file  = "/var/adm/cron/cron.allow"
       $cron_deny_file   = "/var/adm/cron/cron.deny"
-      $file_group       = "sys"
+      $config_group     = "sys"
+      $crontabs_dir     = "/var/spool/cron/crontabs"
+      $cron_log         = "/var/adm/cron/log"
+      $spool_group      = "cron"
     }
     "Solaris": {
       $var_cron        = "/var/cron"
       $cron_allow_file = "/etc/cron.d/cron.allow"
       $cron_deny_file  = "/etc/cron.d/cron.deny"
-      $file_group       = "root"
+      $config_group    = "root"
     }
     default: {
       fail("Class ${name} does not support ${facts['os']['family']} yet")

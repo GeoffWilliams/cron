@@ -11,8 +11,8 @@ class cron::solaris(
     String $var_cron        = $cron::params::var_cron,
     String $cron_allow_file = $cron::params::cron_allow_file,
     String $cron_deny_file  = $cron::params::cron_deny_file,
-    String $file_group      = $cron::params::file_group,
-    Array $allow_users      = [],
+    String $config_group    = $cron::params::config_group,
+    Array  $allow_users     = [],
 ) inherits cron::params {
 
   file { $var_cron:
@@ -26,6 +26,6 @@ class cron::solaris(
     cron_allow_file => $cron_allow_file,
     cron_deny_file  => $cron_deny_file,
     allow_users     => $allow_users,
-    file_group      => $file_group,
+    config_group    => $config_group,
   }
 }
