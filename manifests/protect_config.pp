@@ -19,7 +19,7 @@ class cron::protect_config(
   }
 
 
-  file { [$crontab, $cron_log]:
+  file { $crontab:
     ensure => file,
   }
 
