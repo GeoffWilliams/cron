@@ -5,13 +5,13 @@
 # @param allow_users Array of users to insert into cron.allow
 # @param cron_allow_file File to use for cron.allow
 # @param cron_deny_file File to use for cron.deny
-# @param file_group Group owner for files (cron.allow)
+# @param config_group Group owner for cron.allow
 class cron::cron_allow_deny(
-  String $cron_allow_file,
-  String $cron_deny_file,
-  Array  $allow_users,
-  String $config_group,
-) {
+  String $cron_allow_file = $cron::params::cron_allow_file,
+  String $cron_deny_file  = $cron::params::cron_deny_file,
+  String $config_group    = $cron::params::config_group,
+  Array  $allow_users     = [],
+) inherits cron::params {
 
   File {
     owner => "root",

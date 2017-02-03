@@ -13,9 +13,6 @@ EOD
 groupadd badgroup
 groupadd cron
 mkdir -p /var/adm/cron
-touch /var/adm/cron/log
-chgrp badgroup /var/adm/cron/log
-chmod 777 /var/adm/cron/log
 
 mkdir -p /var/spool/cron/crontabs
 touch /var/spool/cron/crontabs/inky

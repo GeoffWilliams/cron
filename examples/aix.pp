@@ -1,2 +1,0 @@
-# @PDQTest
-include cron::aix
