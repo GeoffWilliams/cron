@@ -1,6 +1,6 @@
 {
   "name": "geoffwilliams-cron",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "geoffwilliams",
   "summary": "Manage cron on AIX, Solaris and RHEL",
   "license": "Apache-2.0",
@@ -9,8 +9,8 @@
   "issues_url": "https://github.com/GeoffWilliams/cron/issues",
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
-    {"name":"geoffwilliams-chmod_r","version_requirement":"0.1.0"},
-    {"name":"geoffwilliams-chown_r","version_requirement":"0.1.2"}
+    {"name":"geoffwilliams-chmod_r","version_requirement":"0.1.2"},
+    {"name":"geoffwilliams-chown_r","version_requirement":"0.2.0"}
   ],
   "data_provider": null
 }
