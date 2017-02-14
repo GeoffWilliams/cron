@@ -29,8 +29,8 @@ class cron::params {
       $cron_log         = "/var/adm/cron/log"
       $spool_group      = "cron"
       $cron_log_perm    = "0640"
-      $cron_log_owner   = "root"
-      $cron_log_group   = "root"
+      $cron_log_owner   = "bin"
+      $cron_log_group   = "bin"
     }
     "Solaris": {
       $var_cron         = "/var/cron"

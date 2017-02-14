@@ -1,6 +1,6 @@
 {
   "name": "geoffwilliams-cron",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "geoffwilliams",
   "summary": "Manage cron on AIX, Solaris and RHEL",
   "license": "Apache-2.0",
