@@ -29,9 +29,10 @@ class cron::cron_allow_deny(
 
   $allow_users.each |$user| {
     file_line { "${cron_allow_file}_user_${user}":
-      ensure => present,
-      line   => $user,
-      path   => $cron_allow_file,
+      ensure  => present,
+      line    => $user,
+      path    => $cron_allow_file,
+      require => File[$cron_allow_file],
     }
   }
 
