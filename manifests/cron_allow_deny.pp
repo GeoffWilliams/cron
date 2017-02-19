@@ -18,6 +18,15 @@ class cron::cron_allow_deny(
     group => $config_group,
   }
 
+  $basedir = { dirname($cron_allow_file) => {
+    ensure => "directory",
+    owner  => "root",
+    group  => $config_group,
+    mode   => "0755"
+  }}
+
+  ensure_resource("file", $basedir)
+
   file { $cron_allow_file:
     ensure => file,
     mode   => "0400",
